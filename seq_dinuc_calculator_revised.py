@@ -176,21 +176,21 @@ for line in SAM:
 
 #count the bases for each position in the nucleosomal DNA sequence file
 aaCountByPosition = [0] * 147
-atCountByPosition = [0] * 147
 acCountByPosition = [0] * 147
 agCountByPosition = [0] * 147
+atCountByPosition = [0] * 147
 caCountByPosition = [0] * 147
-ctCountByPosition = [0] * 147
 ccCountByPosition = [0] * 147
 cgCountByPosition = [0] * 147
+ctCountByPosition = [0] * 147
 gaCountByPosition = [0] * 147
-gtCountByPosition = [0] * 147
 gcCountByPosition = [0] * 147
 ggCountByPosition = [0] * 147
+gtCountByPosition = [0] * 147
 taCountByPosition = [0] * 147
-ttCountByPosition = [0] * 147
 tcCountByPosition = [0] * 147
 tgCountByPosition = [0] * 147
+ttCountByPosition = [0] * 147
 for sequence in DNA:
     if len(sequence) == 0:
         continue
@@ -199,36 +199,36 @@ for sequence in DNA:
         nextBase = sequence[index + 1]
         if base == 'a' and nextBase == 'a':
             aaCountByPosition[index] += 1
-        if base == 'a' and nextBase == 't':
-            atCountByPosition[index] += 1
         if base == 'a' and nextBase == 'c':
             acCountByPosition[index] += 1
         if base == 'a' and nextBase == 'g':
             agCountByPosition[index] += 1
+        if base == 'a' and nextBase == 't':
+            atCountByPosition[index] += 1
         if base == 'c' and nextBase == 'a':
             caCountByPosition[index] += 1
-        if base == 'c' and nextBase == 't':
-            ctCountByPosition[index] += 1
         if base == 'c' and nextBase == 'c':
             ccCountByPosition[index] += 1
         if base == 'c' and nextBase == 'g':
             cgCountByPosition[index] += 1
+        if base == 'c' and nextBase == 't':
+            ctCountByPosition[index] += 1
         if base == 'g' and nextBase == 'a':
             gaCountByPosition[index] += 1
-        if base == 'g' and nextBase == 't':
-            gtCountByPosition[index] += 1
         if base == 'g' and nextBase == 'c':
             gcCountByPosition[index] += 1
         if base == 'g' and nextBase == 'g':
             ggCountByPosition[index] += 1
+        if base == 'g' and nextBase == 't':
+            gtCountByPosition[index] += 1
         if base == 't' and nextBase == 'a':
             taCountByPosition[index] += 1
-        if base == 't' and nextBase == 't':
-            ttCountByPosition[index] += 1
         if base == 't' and nextBase == 'c':
             tcCountByPosition[index] += 1
         if base == 't' and nextBase == 'g':
             tgCountByPosition[index] += 1
+        if base == 't' and nextBase == 't':
+            ttCountByPosition[index] += 1
 
 for position in range(0,147):
     f.write('Position: ' + str(position + 1) + '\n' +
